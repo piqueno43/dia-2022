@@ -49,8 +49,8 @@
           </aside>
           <main class="main-content">
             <header class="header">
-              <h2>Principais serviços</h2>
-              <p>Tudo sobre eleições</p>
+              <h2 class="title">Principais serviços</h2>
+              <p class="description">Tudo sobre eleições</p>
             </header>
             <div class="cards cards-rows-1">
               <section class="card card-green">
@@ -179,14 +179,47 @@
         <div class="modal-title"><h2>Título e local de votação - Consulta por nome</h2></div>
         <div class="modal-content">
           <form>
-            <div class="form-control">
-              <div><label for="first_name" class="label">First name</label> <input id="first_name" class="input" placeholder="John" required="" /></div>
-              <div><label for="last_name" class="label">Last name</label> <input id="last_name" class="input" placeholder="Doe" required="" /></div>
-              <div><label for="company" class="label">Company</label> <input id="company" class="input" placeholder="Flowbite" required="" /></div>
+            <div class="form-control md:grid-cols-2">
+              <div>
+                <label for="LV_NomeTituloCPF" class="label">Nome ou número do título de eleitor ou CPF</label>
+                <input name="nomeTituloCPF" id="LV_NomeTituloCPF" class="input" placeholder="Nome ou número do título de eleitor ou CPF" required />
+              </div>
+              <div>
+                <label for="LV_DataNascimento" class="label">Data de nascimento</label> <input name="dataNascimento" id="LV_DataNascimento" class="input dataNascimento" placeholder="00/00/0000" required autocomplete="off" autofocus="off" />
+              </div>
+              <div><label for="LV_NomeMae" class="label">Nome da mãe</label> <input name="nomeMae" id="LV_NomeMae" class="input" placeholder="Nome completo" required /></div>
+              <div>
+                <div class="flex items-center mt-8 self-center"><input name="naoConstaMae" id="LV_NaoConstaMae" type="checkbox" value="" class="checkbox" /> <label for="LV_NaoConstaMae" class="label m-0 ml-2">Não consta</label></div>
+              </div>
             </div>
-            <div class="mb-6"><label for="email" class="label">Email address</label> <input type="email" id="email" class="input" placeholder="john.doe@company.com" required="" /></div>
-            <div class="buttons"><button type="reset" class="button">Cancelar</button> <button type="submit" class="button">Submit</button></div>
+            <div class="buttons">
+              <button type="reset" class="button" data-drawer-dismiss="drawer-bottom-local-votacao" aria-controls="drawer-bottom-local-votacao">Cancelar</button> <button type="submit" class="button">Consultar</button>
+            </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div id="defaultModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
+      <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Data de nascimento</h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-toggle="defaultModal"
+            >
+              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <div class="p-6 space-y-6 dataNascimento"></div>
         </div>
       </div>
     </div>

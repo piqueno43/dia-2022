@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Tribunal Superior Eleitoral</title>
     <link id="tag-meta-plone" />
     <link id="tag-link-plone" />
@@ -48,15 +48,29 @@
             </div>
           </aside>
           <main class="main-content">
-            <header class="header">
-              <h2 class="title">Principais serviços</h2>
-              <p class="description">Tudo sobre eleições</p>
-            </header>
+            <div class="main-headers">
+              <header class="header">
+                <h2 class="title">Principais serviços</h2>
+                <p class="description">Tudo sobre eleições</p>
+              </header>
+              <div class="controls">
+                <button id="theme-toggle" type="button" class="button-control">
+                  <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                  <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
             <div class="cards cards-rows-1">
               <section class="card card-green">
                 <header class="card-header"><h3 class="card-title">Título</h3></header>
                 <main class="card-content has-icon">
-                  <span class="card-icon"><img src="./images/content/titulo.svg" alt="" /></span>
+                  <span class="card-icon titulo"></span>
                   <ul class="card-list">
                     <li class="card-list-item">
                       <a href="#" data-drawer-target="drawer-bottom-local-votacao" data-drawer-show="drawer-bottom-local-votacao" data-drawer-placement="bottom" aria-controls="drawer-bottom-local-votacao" type="button">Local de votação</a>
@@ -69,7 +83,7 @@
               <section class="card card-green">
                 <header class="card-header"><h3 class="card-title">Justificativa</h3></header>
                 <main class="card-content has-icon">
-                  <span class="card-icon"><img src="./images/content/justificativa.svg" alt="" /></span>
+                  <span class="card-icon justificativa"></span>
                   <ul class="card-list">
                     <li class="card-list-item"><a href="https://www.tse.jus.br/eleitor/justificativa-eleitoral/justificativa-eleitoral">Informações gerais</a></li>
                   </ul>
@@ -78,7 +92,7 @@
               <section class="card card-purple">
                 <header class="card-header"><h3 class="card-title">Imprensa</h3></header>
                 <main class="card-content has-icon">
-                  <span class="card-icon"><img src="./images/content/imprensa.svg" alt="" /></span>
+                  <span class="card-icon imprensa"></span>
                   <ul class="card-list">
                     <li class="card-list-item"><a href="https://www.justicaeleitoral.jus.br/cde-2022/">Centro de Divulgação das Eleições (CDE)</a></li>
                   </ul>
@@ -89,7 +103,7 @@
               <section class="card card-red">
                 <header class="card-header"><h3 class="card-title">Candidaturas</h3></header>
                 <main class="card-content has-icon">
-                  <span class="card-icon"><img src="./images/content/candidaturas.svg" alt="" /></span>
+                  <span class="card-icon candidaturas"></span>
                   <ul class="card-list">
                     <li class="card-list-item"><a href="https://divulgacandcontas.tse.jus.br/divulga/#/">Divulgação de Candidaturas e Contas Eleitorais</a></li>
                   </ul>
@@ -98,7 +112,7 @@
               <section class="card card-red">
                 <header class="card-header"><h3 class="card-title">Justiça Eleitoral</h3></header>
                 <main class="card-content has-icon">
-                  <span class="card-icon"><img src="./images/content/je.svg" alt="" /></span>
+                  <span class="card-icon je"></span>
                   <ul class="card-list">
                     <li class="card-list-item"><a href="https://www.justicaeleitoral.jus.br/">Portal da Justiça Eleitoral</a></li>
                     <li class="card-list-item"><a href="https://www.justicaeleitoral.jus.br/fato-ou-boato/">Fato ou Boato</a></li>
@@ -108,7 +122,7 @@
               <section class="card card-red">
                 <header class="card-header"><h3 class="card-title">Denúncias</h3></header>
                 <main class="card-content has-icon">
-                  <span class="card-icon"><img src="./images/content/denuncias.svg" alt="" /></span>
+                  <span class="card-icon denuncias"></span>
                   <ul class="card-list">
                     <li class="card-list-item"><a href="#">Pardal</a></li>
                     <li class="card-list-item"><a href="https://www.tse.jus.br/eleicoes/eleicoes-2022/sistema-de-alerta">Alerta de Fake News</a></li>
@@ -118,7 +132,7 @@
               <section class="card card-red">
                 <header class="card-header"><h3 class="card-title">Mesárias e mesários</h3></header>
                 <main class="card-content has-icon">
-                  <span class="card-icon"><img src="./images/content/mesario.svg" alt="" /></span>
+                  <span class="card-icon mesario"></span>
                   <ul class="card-list">
                     <li class="card-list-item"><a href="https://www.justicaeleitoral.jus.br/eleicoes/mesario/">Canal do mesário ou mesária</a></li>
                     <li class="card-list-item"><a href="#">Aplicativo</a></li>

@@ -21,7 +21,11 @@
     <link href="css/app.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="acessibilidade acessibilidade_bg-azul"></div>
+    <div class="acessibilidade acessibilidade_bg-azul">
+      <ul>
+        <li class="main-footer-item"><a class="main-footer-link" href="https://www.tse.jus.br/eleitor/servicos/ouvidoria">Ouvidoria</a></li>
+      </ul>
+    </div>
     <nav class="navbar menu">
       <div class="menu__conteudo">
         <div class="menu__linha"><img src="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/logos/tre-df.png" alt="" /></div>
@@ -41,8 +45,8 @@
               </div>
               <div class="sidebar-footer">
                 <footer class="whatsapp-qr-code">
-                  <h2 class="sidebar-whatsapp-title">Tira dúvidas eleitoral</h2>
-                  <img class="sidebar-whatsapp-img" src="./images/content/qr-code.svg" alt="" /> <a class="whatsapp-button" href="https://wa.me/556196371078" rel="nofollow" target="_blank">Whatssapp(bot)</a>
+                  <h2 class="sidebar-whatsapp-title">Tira-Dúvidas Eleitoral</h2>
+                  <img class="sidebar-whatsapp-img" src="./images/content/qr-code.svg" alt="" /> <a class="whatsapp-button" href="https://wa.me/556196371078" rel="nofollow" target="_blank">WhatsApp</a>
                 </footer>
               </div>
             </div>
@@ -170,9 +174,14 @@
         </div>
       </div>
     </div>
-    <div id="drawer-bottom-local-votacao" class="modal translate-y-full" tabindex="-1" aria-labelledby="drawer-bottom-label" aria-hidden="false">
+    <div id="drawer-bottom-local-votacao" class="fixed z-40 w-full p-4 overflow-y-auto bg-white transition-transform bottom-0 left-0 right-0 translate-y-full" tabindex="-1" aria-labelledby="drawer-bottom-label" aria-hidden="false">
       <div class="modal-container">
-        <button type="button" data-drawer-dismiss="drawer-bottom-local-votacao" aria-controls="drawer-bottom-local-votacao" class="modal-button-close">
+        <button
+          type="button"
+          data-drawer-dismiss="drawer-bottom-local-votacao"
+          aria-controls="drawer-bottom-local-votacao"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center"
+        >
           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path
               fill-rule="evenodd"
@@ -193,10 +202,19 @@
               <div>
                 <label for="LV_DataNascimento" class="label">Data de nascimento</label> <input name="dataNascimento" id="LV_DataNascimento" class="input dataNascimento" placeholder="00/00/0000" required autocomplete="off" autofocus="off" />
               </div>
-              <div><label for="LV_NomeMae" class="label">Nome da mãe</label> <input name="nomeMae" id="LV_NomeMae" class="input" placeholder="Nome completo" required /></div>
               <div>
-                <div class="flex items-center mt-8 self-center"><input name="naoConstaMae" id="LV_NaoConstaMae" type="checkbox" value="" class="checkbox" /> <label for="LV_NaoConstaMae" class="label m-0 ml-2">Não consta</label></div>
+                <label for="LV_NomeMae" class="label">Nome da mãe</label>
+                <div class="flex flex-wrap items-stretch w-full">
+                  <input name="nomeMae" id="LV_NomeMae" class="input flex-1" placeholder="Nome completo" required />
+                  <div class="flex -mr-px items-center ml-2"><input name="naoConstaMae" id="LV_NaoConstaMae" type="checkbox" value="" class="checkbox" /> <label for="LV_NaoConstaMae" class="label m-0 ml-2">Não consta</label></div>
+                </div>
               </div>
+            </div>
+            <div class="w-full mb-5 text-gray-500">
+              <p class="text-right g-recaptcha g-recaptcha-form-quitacao-eleitoral" id="captcha-tse" data-sitekey="6LeEYa0fAAAAAIwHU9lHw3fahlRNNb6yvv1Fjnbc" data-action="formquitacaoeleitoral">
+                protegido por reCAPTCHA (<a href="https://www.google.com/intl/pt-BR/policies/privacy/" class="underline text-blue-700">Privacidade</a> -
+                <a href="https://www.google.com/intl/pt-BR/policies/terms/" class="underline text-blue-700">Termos</a>)
+              </p>
             </div>
             <div class="buttons">
               <button type="reset" class="button" data-drawer-dismiss="drawer-bottom-local-votacao" aria-controls="drawer-bottom-local-votacao">Cancelar</button> <button type="submit" class="button">Consultar</button>
